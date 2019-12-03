@@ -64,7 +64,30 @@ Click Create repository.
 ---
 ## Workflow & Commands
 
-
+pwd print working directory
+ls list
+cd change directory
+mkdir make directory
+rmdir remove directory
+touch make a file
+rm remove
+rm -rf force remove
+mv (to rename)
+mv (to move)
+c9 file (or c9 open file)
+git init initialize the repository
+rm -rf .git uninitialize the repo
+git add . add unknown files
+git commit -m "message" commit all changes mad ein your workspace
+git remote add origin URL
+git push -u origin master
+git push
+git diff
+git log
+q (while in git log)
+git checkout -- file
+git reset HEAD file
+git remote -v
 
 ---
 ## Rolling Back Changes
