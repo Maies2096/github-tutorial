@@ -141,7 +141,7 @@ Since you used --hard with the command, you are unable to undo that if you want 
 Rollbacking to a previous commit using another command is much safer because it isn’t permanent like this one\
 This command removes the commit from existence, not just from Git, normally if you delete a commit it remains in Git for 90 days BUT if you use this command, the commit gets removed from history, from Git, FROM EXISTENCE, FROM… well you get the idea:)
 Undo a push
-Hypothetical situation: You decided to push the changes on Git to Github, but just realized that one of your  commits has a problem. You wnat to undo this and restore it.
+Hypothetical situation: You decided to push the changes on Git to Github, but just realized that one of your  commits has a problem. You want to undo this and restore it.
 
 -	The command git revert <SHA> create a new commit that will undo the SHA you are given
 -  git revert will create a new commit that’s the opposite of the given SHA.
@@ -154,7 +154,7 @@ Hypothetical situation: You decided to push the changes on Git to Github, but ju
 -so you can now git push the new “inverse” commit to undo your mistaken commit.
 But why use this?
 This git command is the most simple way to “undo” anything in Git.
-It doesn’t affect the history of your staging history, its just a command that cancels out another!
+It doesn’t affect the history of your staging history, it's just a command that cancels out another!
 Say you start with 2, then add 2, then subtract 2, the original 2 didn’t change but the +2 and -2 canceled each other out!
 
 
@@ -165,12 +165,12 @@ Say you start with 2, then add 2, then subtract 2, the original 2 didn’t chang
 All commands below are essential and should be memorized for you own sake
 
 `git init` - This command initializes the git in a directory
-An initialized driectory is a repsoitory
+An initialized directory is a repository
 YOU SHOULD NOT GIT INIT IN THE ROOT DIRECTORY
 Initializing git in the root directory causes merge conflicts
-The root direcotry is a rpository and you AHOULDN’T HAVE A REPO INSIDE A REPO
+The root directory is a repository and you AHOULDN’T HAVE A REPO INSIDE A REPO
 
-`rm -rf .git` - this will un-inititilaize git.
+`rm -rf .git` - this will uninitialize git.
 It is useful when you  initialize git in the wrong directory or in the root directory
 
 `git add file.ext` - Adds changes/edits  for a *specific file* to the stage ready to commit
@@ -181,27 +181,27 @@ Adding them to the stage allows you to take a snapshot of the staging area, maki
 
 
 `git status` - allows you to see the changes/edits you have added/not added to the stage
--if all edits/changes are added, then you are ready to commit.
+-If all edits/changes are added, then you are ready to commit.
 - Green : added
 - Red : not added yet
 
 > `Modified: <file_name>` in red= not added to stage.
-If yous ee the smae text in green then the file has been added to the satge and is ready to be commited
+If yous ee the same text in green then the file has been added to the stage and is ready to be committed
 
 `git commit -m "short/specific message"`
-- use this when there is no more edits to add and the file is ready to be commited/saved
+- use this when there is no more edits to add and the file is ready to be committed/saved
 
-* Your message *must be a short consise present command
-       * This will allow you to look back and make changes, in the future, if needed whether it be during collaboration or by yourself
+* Your message *must be a short concise present command
+       * This will allow you to look back and make changes, in the future, if needed, whether it be during collaboration or by yourself
 
-#####Comands used when comparing/seeing previous commits
+#####Commands used when comparing/seeing previous commits
 
 
 `git diff` - shows the difference between the previous commit and your current edit
 
 `git log` - shows you _all_ your previous commits
 
-HYpothetical Situation: You are stuck in git log and want to git out( pun intented)
+HYpothetical Situation: You are stuck in git log and want to get out( pun intended)
 * On your keyboard, press *Control and Q* at the same time
 
 #### Setting up Push and Pull
@@ -241,16 +241,16 @@ Copy the code that looks like the one above ( on **YOUR** page) and paste it in 
  Press enter
 
 Now that you have your local and remote synchronized if you:
- edit your README.md, add the edits, and commit them:  you can now use just the command `git push`
+ edit your README.md, add the edits, and commit them:  you can now use the command `git push`
 
-> The process done above was the synchronization of your ide and your repository in the cloud.	- 	If you didn't select SSH key, and selected HTTPS, you would have to be signing in every time you are going to push and pull which is inconvenient and tiring
+> The process done above was the synchronization of your idea and your repository in the cloud.	- 	If you didn't select SSH key, and selected HTTPS, you would have to be signing in every time you are going to push and pull which is inconvenient and tiring
 The SSH Key tells your computer to recognize the fact that you linked your ide with your github- now it won’t ask for your information again.
 
 **** More Commands
     * `git remote add origin URL` - sets up the connection between the remote and local repo
     * `git push -u origin master` -  creates a permanent bridge between the remote and the local. This allows to push without the extra origin master part that usually follows the command.
 
-`git remote -v` - tells you where your commtis are being sent to and from.
+`git remote -v` - tells you where your comments are being sent to and from.
 This is similar to `git status`
 
 > `git pull` only used when you're working in your remote (Github) and wanted to update your local.
@@ -264,7 +264,7 @@ updates your remote.
 > Hold up.
 
 What if :  your local repo disappears due to a virus
-What if : your repo got delet\ed on accident
+What if : your repo got deleting\ed on accident
 What if :you want to work off someones project for yourself,
 
 Now that you know how to backup your local, you should learn how to clone!
@@ -281,7 +281,7 @@ Now that you know how to backup your local, you should learn how to clone!
 7. Press ENTER
     * If you are going to work in the repo make sure to `cd` into it.
 
-`git clone` - Allows you to copy a remote repo into your ide.
+`git clone` - Allows you to copy a remote repo into your ides.
 
 > Cons of `git clone`
 you can not push your local commits to the remote repo
@@ -289,7 +289,7 @@ But why?
  When you clone you have a local copy of **THEIR** remote repo.
  You DON’T have permission to push to their remote.
 
-In this case, you’ll need to knwo how to fork
+In this case, you’ll need to know how to fork
 
 ##### Collaboration
 
@@ -342,7 +342,7 @@ Great question- the answer to that is Pull Requests!
 10. Press _"create pull request"_
 
 > “Why did their repo not change?”
-You're suggesting a change. Once you send a pull request they will get notified through their email and see your suggested changes. Ultimatley they get to decide whether or not they accept your Pull Request- Welcome to the Real World!
+You're suggesting a change. Once you send a pull request they will get notified through their email and see your suggested changes. Ultimately they get to decide whether or not they accept your Pull Request- Welcome to the Real World!
 
 “What if I am the owner and I want to accept/merge the pull request?”
 
@@ -351,7 +351,7 @@ You're suggesting a change. Once you send a pull request they will get notified 
 2. Press on “pull requests”
     * Located in between _"Actions"_ and _"Issues"_
 3. Open the sent pull request
-4. If you chose to accept the changes- press "Merge pull request"
+4. If you choose to accept the changes- press "Merge pull request"
 5. Press _"Confirm Merge"_
 6. Check the remote repo and make sure it went through
 
@@ -360,11 +360,10 @@ Of course not! You will have to use `git pull` to pull the repo from your remote
 
 7. Go to your local repo
 8. In your command line type `git pull`
-    * Your local repo will instantly updateby pulling information from your remote repo
+    * Your local repo will instantly update by pulling information from your remote repo
 
 _And that’s all folks!_
 ---
-
 
 
 
