@@ -145,6 +145,9 @@ Hypothetical situation: You decided to push the changes on Git to Github, but ju
 
 -	The command git revert <SHA> create a new commit that will undo the SHA you are given
 -  git revert will create a new commit that’s the opposite of the given SHA.
+**each commit has it own unique SHA code. This could be accessed by doing `git log`**
+
+
 - anything removed in the old commit will be added in the new commit
 - anything added in the old commit will be removed in the new commit.
 - git revert and SHA will essentially cancel each other out
@@ -249,3 +252,124 @@ The SSH Key tells your computer to recognize the fact that you linked your ide w
 
 `git remote -v` - tells you where your commtis are being sent to and from.
 This is similar to `git status`
+
+> `git pull` only used when you're working in your remote (Github) and wanted to update your local.
+Sends commits from remote repo (github) down to local repo (ide).
+updates your remote.
+
+#### Cloning Vs Forking
+
+##### Clone:
+
+> Hold up.
+
+What if :  your local repo disappears due to a virus
+What if : your repo got delet\ed on accident
+What if :you want to work off someones project for yourself,
+
+Now that you know how to backup your local, you should learn how to clone!
+
+
+1. Go to [github.com](https://github.com/)
+2. Go to the repository you'd like to copy
+3. Press "Clone or Download"
+    * Make sure it says "Clone with SSH"
+        * If it says "Clone with HTTPS" click "Use SSH"
+4. Copy the URL
+5. Go to your IDE and make sure you are in the directory where you want this repo to go
+6. Type `git clone` and paste the URL after it
+7. Press ENTER
+    * If you are going to work in the repo make sure to `cd` into it.
+
+`git clone` - Allows you to copy a remote repo into your ide.
+
+> Cons of `git clone`
+you can not push your local commits to the remote repo
+But why?
+ When you clone you have a local copy of **THEIR** remote repo.
+ You DON’T have permission to push to their remote.
+
+In this case, you’ll need to knwo how to fork
+
+##### Collaboration
+
+**Forking**
+
+> Forking on the other hand, give you a **remote copy** of *THEIR* **remote repo**.
+Forking gives you the ability to :
+clone your remote to your local machine.
+ collaborate with others
+work on the local repository and then push it  to the remote repository
+suggest changes in the remote repo (pull requests- down below)
+
+
+In order to fork you need to know how to clone.
+Steps to effectively Fork:
+
+1. Go to [github.com](https://github.com/)
+2. Go to a repository you'd like to fork
+3. Press the fork button located at the top right of the screen.
+4. Wait for it to load then click on "Clone or Download"
+    * Make sure it says "Clone with SSH"
+        * If it says "Clone with HTTPS" click "Use SSH"
+4. Copy the URL
+5. Go to your ide and make sure you are in the directory where you want this repo to go
+6. Type `git clone` and paste the URL after it
+7. Press ENTER
+
+
+“What if I wanted to learn how to suggest changes to the owner of the original remote repo?”
+Great question- the answer to that is Pull Requests!
+
+#####** How to send and accept Pull Requests**
+
+
+1. Follow the steps on how to fork
+2. Make a change in the file of the local repo that was just formed by forking and cloning.
+3. After the change/edit
+    * `git add`
+    * `git commit -m "specific/short change`
+    * `git push`
+        * *** Step 3 steps are important overall, they summarized as _The Workflow Process_ ***
+
+> Now that you forked and cloned the repositories at the same time, all you have to do now is set the location of where you're going to push.
+
+6. Go to the owners version of the repository
+7. Press _"New pull request"_
+    * Github is smart enough to compare their remote repo with your remote repo
+8. Press _"Create pull request"_
+9. Write a comment telling them about your suggested revisions and push your repo.
+10. Press _"create pull request"_
+
+> “Why did their repo not change?”
+You're suggesting a change. Once you send a pull request they will get notified through their email and see your suggested changes. Ultimatley they get to decide whether or not they accept your Pull Request- Welcome to the Real World!
+
+“What if I am the owner and I want to accept/merge the pull request?”
+
+1. Go to your remote repository that received a pull request
+    * You can quickly access this by going to the email you got with the pull request and click the first link given
+2. Press on “pull requests”
+    * Located in between _"Actions"_ and _"Issues"_
+3. Open the sent pull request
+4. If you chose to accept the changes- press "Merge pull request"
+5. Press _"Confirm Merge"_
+6. Check the remote repo and make sure it went through
+
+ > “It only appears in my remote and not my local. Did I do something wrong?”
+Of course not! You will have to use `git pull` to pull the repo from your remote to your local
+
+7. Go to your local repo
+8. In your command line type `git pull`
+    * Your local repo will instantly updateby pulling information from your remote repo
+
+_And that’s all folks!_
+---
+
+
+
+
+
+
+
+
+
